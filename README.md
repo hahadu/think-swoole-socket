@@ -14,7 +14,9 @@ namespace app;
 use Hahadu\ThinkSwooleSocket\subscribe\Swooleable;
 class Swoole extends Swooleable{
     public function onConnect($data){
-       $this->push($data);
+       //$this->push($data);
+       //or
+       //$this->websocket->push(json_encode($data));
     }
 }
 ```

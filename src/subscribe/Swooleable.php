@@ -12,6 +12,8 @@ use think\Config;
 use think\Request;
 use think\swoole\Websocket;
 use think\swoole\websocket\socketio\Packet;
+use Swoole\Lock;
+
 
 abstract class Swooleable implements WebsocketInterface
 {
@@ -35,11 +37,16 @@ abstract class Swooleable implements WebsocketInterface
      * @var
      */
     protected $users;
+    /*****
+     * @var Lock
+     */
+    protected $lock;
 
     public function __construct(Server $server, Websocket $websocket, Config $config){
         $this->websocket = $websocket;//依赖注入的方式
         $this->server = $server;
         $this->redis = new Redis();
+        $this->lock = new Lock();
     }
 
 

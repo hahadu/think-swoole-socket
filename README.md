@@ -37,7 +37,8 @@ edit swoole.php for thinkphp config path
 ];
 ```
 
-run console 
+### run 
+console 
 ```textmate
 php think swoole start
 ```

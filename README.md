@@ -40,7 +40,7 @@ run console
 php think swoole start
 ```
 
-if you console callback
+if you console show
 ````text
 Starting swoole http server...
 Swoole http server started: <http://127.0.0.1:9502> 

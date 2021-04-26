@@ -3,7 +3,7 @@
     "description": "thinkphp swoole socket client&server subscribe",
     "type": "library",
     "require": {
-        "topthink/think-swoole": ">=3.1",
+        "topthink/think-swoole": ">=3.1"
 
     },
     "require-dev": {

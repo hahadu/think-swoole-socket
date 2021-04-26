@@ -55,3 +55,13 @@ browser going
 ```text
 http://127.0.0.1:9502
 ```
+
+### other 
+home page :
+#### github 
+[hahadu/think-swoole-socket](https://github.com/hahadu/think-swoole-socket)
+#### gitee:
+[hahadu/think-swoole-socket](https://gitee.com/hahadu/think-swoole-socket)
+
+#### browser javascript client:
+[tpswoole-websocket-jsclient](https://github.com/hahadu/tpswoole-websocket-jsclient)

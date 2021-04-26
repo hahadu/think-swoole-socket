@@ -1,0 +1,26 @@
+{
+    "name": "hahadu/think-swoole-socket",
+    "description": "thinkphp swoole socket client&server subscribe",
+    "type": "library",
+    "require": {
+        "topthink/think-swoole": ">=3.1",
+
+    },
+    "require-dev": {
+        "php": ">=7.1",
+        "ext-redis": "*"
+    },
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "hahadu",
+            "email": "582167246@qq.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Hahadu\\ThinkSwooleSocket\\": "src/"
+        }
+    },
+        "minimum-stability": "dev"
+}

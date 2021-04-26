@@ -91,7 +91,7 @@ abstract class Swooleable implements WebsocketInterface
      * @param int $code
      * @return bool
      */
-    protected function wsPush($message, $value = '', $code = 1)
+/*    protected function wsPush($message, $value = '', $code = 1)
     {
 
         $type = ($code == 1) ? 'success' : 'error';
@@ -102,7 +102,7 @@ abstract class Swooleable implements WebsocketInterface
         ]);
 
         return $this->push($_data);
-    }
+    }*/
 
 
 }

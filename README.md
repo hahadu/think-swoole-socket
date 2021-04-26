@@ -29,7 +29,7 @@ edit swoole.php for thinkphp config path
   'handler'       => Handler::class, //default
   ...
   'subscribe'     => [
-            app\Swoole::class //
+            app\Swoole::class //because namespace app\Swoole
         ],
 ]
 ];

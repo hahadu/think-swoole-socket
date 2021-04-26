@@ -26,10 +26,10 @@ edit swoole.php for thinkphp config path
  ...
   'websocket' => [
   ...
-  'handler'       => Handler::class,
+  'handler'       => Handler::class, //default
   ...
   'subscribe'     => [
-            app\swoole\Swoole::class //
+            app\Swoole::class //
         ],
 ]
 ];

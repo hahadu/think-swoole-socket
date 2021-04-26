@@ -7,8 +7,10 @@ composer require hahadu/think-swoole-socket
 ```
 
 ### main class
+create class
 Swoole.php
 ```php
+namespace app;
 use Hahadu\ThinkSwooleSocket\subscribe\Swooleable;
 class Swoole extends Swooleable{
     public function onConnect($data){
@@ -26,6 +28,9 @@ edit swoole.php for thinkphp config path
   ...
   'handler'       => Handler::class,
   ...
+  'subscribe'     => [
+            app\swoole\Swoole::class //
+        ],
 ]
 ];
 ```

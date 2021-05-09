@@ -25,6 +25,10 @@ abstract class Swooleable implements WebsocketInterface
      * @var Server
      */
     protected $server;    //server对象
+    /*****
+     * @var Config
+     */
+    protected $config;
     /****
      * @var \Redis
      */
@@ -33,10 +37,7 @@ abstract class Swooleable implements WebsocketInterface
      * @var int
      */
     protected $fd;
-    /*****
-     * @var
-     */
-    protected $users;
+
     /*****
      * @var Lock
      */
@@ -45,6 +46,7 @@ abstract class Swooleable implements WebsocketInterface
     public function __construct(Server $server, Websocket $websocket, Config $config){
         $this->websocket = $websocket;//依赖注入的方式
         $this->server = $server;
+        $this->config = $config;
         $this->redis = new Redis();
         $this->lock = new Lock();
     }
@@ -69,8 +71,6 @@ abstract class Swooleable implements WebsocketInterface
 
     }
 
-    abstract public function onConnect($data);
-
     /**
      * "onClose" listener.
      *
@@ -79,7 +79,8 @@ abstract class Swooleable implements WebsocketInterface
      */
     public function onClose($fd)
     {
-        $this->server->reload();
+        //主动断开连接使用disconnect()
+    //    $this->server->reload();
     }
     /*****
      * 推送数据

@@ -5,7 +5,7 @@ namespace Hahadu\ThinkSwooleSocket\subscribe;
 
 
 use Hahadu\ThinkSwooleSocket\interfaces\WebsocketInterface;
-use Swoole\Server;
+//use Swoole\Server;
 use Swoole\WebSocket\Frame;
 use think\cache\driver\Redis;
 use think\Config;
@@ -43,9 +43,9 @@ abstract class Swooleable implements WebsocketInterface
      */
     protected $lock;
 
-    public function __construct(Server $server, Websocket $websocket, Config $config){
+    public function __construct(Websocket $websocket, Config $config){
         $this->websocket = $websocket;//依赖注入的方式
-        $this->server = $server;
+    //    $this->server = $server;
         $this->config = $config;
         $this->redis = new Redis();
         $this->lock = new Lock();
